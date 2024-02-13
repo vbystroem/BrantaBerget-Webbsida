@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Välj paket</h1>
+    <form>
+      <div class="packageRadio">
+        <label for="packageBarn">Barnpaketet</label>
+        <input
+          type="radio"
+          id="packageBarn"
+          name="packageType"
+          value="Barnpaketet"
+        />
+        <label for="packageUngdom">Ungdomspaketet</label>
+        <input
+          type="radio"
+          id="packageUngdom"
+          name="packageType"
+          value="Ungdomspaketet"
+        />
+        <label for="packageVuxen">Vuxenpaketet</label>
+        <input
+          type="radio"
+          id="packageVuxen"
+          name="packageType"
+          value="Vuxenpaketet"
+          checked="checked"
+        />
+      </div>
+      <div class="formBox">
+        <label for="age">Ålder</label>
+        <input type="date" id="age" placeholder="Ålder" required />
+      </div>
+      <div class="formBox">
+        <label for="height">Längd</label>
+        <select name="height" id="height" required>
+          <option value="">Välj</option>
+          <option value="90">90cm</option>
+          <option value="95">95cm</option>
+          <option value="100">100cm</option>
+          <option value="105">105cm</option>
+          <option value="110">110cm</option>
+          <option value="115">115cm</option>
+          <option value="120">120cm</option>
+          <option value="125">125cm</option>
+          <option value="130">130cm</option>
+          <option value="135">135cm</option>
+          <option value="140">140cm</option>
+          <option value="145">145cm</option>
+          <option value="150">150cm</option>
+          <option value="155">155cm</option>
+          <option value="160">160cm</option>
+          <option value="165">165cm</option>
+          <option value="170">170cm</option>
+          <option value="175">175cm</option>
+          <option value="180">180cm</option>
+          <option value="185">185cm</option>
+          <option value="190">190cm</option>
+          <option value="195">195cm</option>
+          <option value="200">200cm</option>
+          <option value="205">205cm</option>
+          <option value="210">210cm</option>
+          <option value="215">215cm</option>
+        </select>
+      </div>
+      <div class="formBox">
+        <label for="weight">Vikt</label>
+        <select name="weight" id="weight" required>
+          <option value="">Välj</option>
+          <option value="10">10kg</option>
+          <option value="15">15kg</option>
+          <option value="20">20kg</option>
+          <option value="25">25kg</option>
+          <option value="30">30kg</option>
+          <option value="35">35kg</option>
+          <option value="40">40kg</option>
+          <option value="45">45kg</option>
+          <option value="50">50kg</option>
+          <option value="55">55kg</option>
+          <option value="60">60kg</option>
+          <option value="65">65kg</option>
+          <option value="70">75kg</option>
+          <option value="80">80kg</option>
+          <option value="85">85kg</option>
+          <option value="90">90kg</option>
+          <option value="95">95kg</option>
+          <option value="100">100kg</option>
+          <option value="105">105kg</option>
+          <option value="110">110kg</option>
+          <option value="115">115kg</option>
+          <option value="120">120kg</option>
+          <option value="125">125kg</option>
+          <option value="130">130kg</option>
+          <option value="135">135kg</option>
+          <option value="140">140kg</option>
+          <option value="145">145kg</option>
+          <option value="150">150kg</option>
+          <option value="155">155kg</option>
+          <option value="160">160kg</option>
+        </select>
+      </div>
+      <div class="formBox">
+        <label for="shoeSize">Skostorlek</label>
+        <select name="shoeSize" id="shoeSize" required>
+          <option value="">Välj</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+        </select>
+      </div>
+      <div class="formBox">
+        <button id="btn">Lägg till bokning</button>
+      </div>
+    </form>
+  </body>
+  <script>
+    let bookings = [];
+    const addBooking = (ev) => {
+      ev.preventDefault();
+      let booking = {
+        packageType: document.querySelector('input[name="packageType"]:checked').value,
+        age: document.getElementById("age").value,
+        height: document.getElementById("height").value,
+        weight: document.getElementById("weight").value,
+        shoeSize: document.getElementById("shoeSize").value,
+      };
+      bookings.push(booking);
+      document.querySelector("form").reset();
+
+      console.warn("added", { bookings });
+      let pre = document.querySelector("#msg pre");
+      pre.textContent = "\n" + JSON.stringify(bookings, "\t", 2);
+
+      localStorage.setItem("Bokningar", JSON.stringify(bookings));
+    };
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("btn").addEventListener("click", addBooking);
+    });
+  </script>
+</html>
