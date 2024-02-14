@@ -154,13 +154,9 @@
       bookings.push(booking);
       document.querySelector("form").reset();
 
-      console.warn("added", { bookings });
-      let pre = document.querySelector("#msg pre");
-      pre.textContent = "\n" + JSON.stringify(bookings, "\t", 2);
-
-      localStorage.setItem("Bokningar", JSON.stringify(bookings));
+      localStorage.setItem('Bokningar', JSON.stringify(bookings));
     };
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("btn").addEventListener("click", addBooking);
     });
   </script>
