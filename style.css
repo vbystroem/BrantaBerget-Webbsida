@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.formBoxInput {
+    display: block;
+}
+
+.address > .formBoxInput {
+    display: inline;
+}
+
+.datePicker > .formBox {
+    display: inline;
+}
