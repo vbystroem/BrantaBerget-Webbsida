@@ -1,0 +1,22 @@
+{
+  "name": "brantaberget-webbsida",
+  "version": "1.0.0",
+  "description": "Webbsidan för skidanläggningen BrantaBreget",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbystroem/BrantaBerget-Webbsida.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbystroem/BrantaBerget-Webbsida/issues"
+  },
+  "homepage": "https://github.com/vbystroem/BrantaBerget-Webbsida#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
