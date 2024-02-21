@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kjj0vqk.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kjj0vqk.css">
+    <title>BrantaBerget</title>
   </head>
   <body>
     <main>
-      <form name="myForm">
+      <form name="myForm" class="container">
         <h1>Bokning</h1>
         <h2>Välj datum</h2>
         <div class="datePicker">
@@ -49,7 +51,7 @@
           />
         </fieldset>
 
-        <fieldset>
+        <fieldset class="">
           <div class="formBox">
             <label for="age">Ålder</label>
             <input type="date" id="age" placeholder="Ålder" required />
@@ -157,7 +159,7 @@
 
         <hr>
 
-        <fieldset>
+        <fieldset class="">
           <h2>Dina uppgifter</h2>
           <div class="formBox">
             <div class="formBoxInput">
@@ -198,10 +200,12 @@
         </fieldset>
         
         <div class="formBox">
-          <button id="btn">Lägg till bokning</button>
+          <button class="btn btn-primary " id="btn">Lägg till bokning</button>
         </div>
       </form>
     </main>
   </body>
-  <script src="app.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
 </html>

@@ -1,0 +1,23 @@
+$primary: rgb(127, 168, 210);
+$secondary: rgb(152, 106, 171);
+$tertiary: rgb(243, 147, 106);
+$quarternary: rgb(222, 168, 206);
+
+$dark: rgb(18, 34, 49);
+$light: rgb(252, 250, 232);
+
+$darkmode-gradient: linear-gradient($dark, $secondary);
+
+$navbar-padding-y: 1rem;
+$navbar-dark-color: $light;
+
+$font-family-sans-serif: futura-pt;
+
+body {
+    background-image: $darkmode-gradient;
+    background-repeat: cover;
+    background-size: 100vw 100vh;
+}
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

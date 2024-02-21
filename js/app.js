@@ -26,18 +26,14 @@ let bookings = [];
     console.log(bookingconfirm);
     }
     function validateForm() {
-        var x = document.forms["myForm"]["fname"].value;
-        if (x == "") {
-            alert("Obligatoriska fält är inte ifyllda");
-            return false;
-        }
-        else {
-            document.querySelector("form").reset();
-        }
-        } 
+      switch(h) {
+        default:
+          document.querySelector("form").reset();
+      }
+        
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("btn").addEventListener("click", addBooking);
       document.getElementById("btn").addEventListener("click", confirmBooking);
       document.getElementById("btn").addEventListener("click", validateForm);
     });
-
+  }
