@@ -9,37 +9,39 @@
     <title>BrantaBerget</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark border-bottom">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="s" alt="">
+                <img src="img/logo_light_notitle.svg" id="logo-svg" alt="brantabergets logotyp">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
             data-bs-target="#navbarNavDropdown">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link fw-semibold">Hem</a>
+                        <a href="index.html" class="nav-link">Hem</a>
                     </li>
                     <li class="nav-item">
-                        <a href="bokningssida.html" class="nav-link fw-semibold">Boka Utrustning</a>
+                        <a href="bokningssida.html" class="nav-link">Boka utrustning</a>
                     </li>
                     <li class="nav-item">
-                        <a href="vaffelStuga.html" class="nav-link fw-semibold">Våffelstugan</a>
+                        <a href="vaffelstuga.html" class="nav-link">Våffelstugan</a>
                     </li>
                     <li class="nav-item">
-                        <a href="pistkarta.html" class="nav-link fw-semibold">Pistkarta</a>
+                        <a href="pistkarta.html" class="nav-link">Pistkarta</a>
                     </li>
                 </ul>
             </div>
+            
         </div>
     </nav>
-    <div>
-        <h1>Boka utrustning</h1>
-        <a href="./bokningssida.html">Boka nu!</a>
+    <div class="container d-flex flex-column min-vh-100 justify-content-center">
+        <h1 class="text-light">Välkommen till vårt<br> vinterlandskap Snötopia</h1>
+        <button class="btn btn-outline-light p-3 col-4 col-md-3 col-lg-2 mt-5 rounded-pill">Boka Nu!</button>
     </div>
+        
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
