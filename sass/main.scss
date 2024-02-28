@@ -3,7 +3,7 @@ $secondary: rgb(152, 106, 171);
 $tertiary: rgb(243, 147, 106);
 $quarternary: rgb(222, 168, 206);
 
-$dark: rgb(18, 34, 49);
+$dark: #111b26;
 $light: rgb(252, 250, 232);
 
 $darkmode-gradient: linear-gradient($dark, $secondary);
@@ -21,6 +21,35 @@ $btn-font-size: 1.5rem;
     padding-left: 2rem;
 }
 
+p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: $light;
+}
+
+.landing-image {
+    background-image: url("/img/clear-skye.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: scale-down;
+}
+
+.landing-image-2 {
+    background-image: $darkmode-gradient;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: scale-down;
+}
+
+@media (max-width: 1250px) {
+    .landing-image {
+        height: 50vh;
+    }
+  }
+  
+
 #logo-svg {
     width: 50px;
     height: 50px;
@@ -29,18 +58,16 @@ $btn-font-size: 1.5rem;
     visibility: visible;
 }
 
-body {
-    background-image: $darkmode-gradient;
-    background-repeat: cover;
-    background-size: 100vw 100vh;
-    height: 100vh;
-}
-
 h1 {
     font-family: new-spirit;
     font-weight: 700;
     color: $light
 }
 
+h3 {
+    font-family: new-spirit;
+    font-weight: 500;
+    color: $light !important;
+}
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
