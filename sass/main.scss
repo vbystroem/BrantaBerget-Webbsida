@@ -13,7 +13,7 @@ $navbar-dark-color: $light;
 
 $font-family-sans-serif: futura-pt;
 
-$btn-font-size: 1.5rem;
+$btn-font-size: 1.25rem;
 
 .nav-item {
     font-size: 1.25rem;
@@ -37,18 +37,26 @@ p {
 
 .landing-image-2 {
     background-image: $darkmode-gradient;
-    height: 100vh;
+    height: 200vh;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: scale-down;
+    z-index: 1;
 }
 
-@media (max-width: 1250px) {
-    .landing-image {
-        height: 50vh;
-    }
-  }
-  
+
+#darkmode_svg-pattern-blue {
+    transform: translateY(50vh);
+}
+
+#darkmode_svg-pattern-pink {
+    transform: translateY(120vh);
+}
+
+
+.card  {
+    height: 100%;
+} 
 
 #logo-svg {
     width: 50px;
@@ -61,7 +69,8 @@ p {
 h1 {
     font-family: new-spirit;
     font-weight: 700;
-    color: $light
+    color: $light;
+    font-size: 3rem !important;
 }
 
 h3 {
@@ -69,5 +78,31 @@ h3 {
     font-weight: 500;
     color: $light !important;
 }
+
+h4 {
+    font-size: 1.25rem !important;
+    font-family: new-spirit;
+    font-weight: 300;
+    color: $light !important;
+}
+
+@media (max-width: 1250px) {
+    .landing-image {
+        height: 50vh;
+    }
+
+    #darkmode_svg-pattern-blue {
+        transform: translateY(65vh);
+        object-fit: cover;
+        height: 50vh;
+    }
+
+    #darkmode_svg-pattern-pink {
+        transform: translateY(120vh);
+        object-fit: cover;
+        height: 50vh;
+    }
+  }
+
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

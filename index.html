@@ -40,21 +40,27 @@
         </div>
     </nav>
 
-    <div class="bg-image landing-image">
+    <div class="bg-image landing-image min-vh-100">
         <div class="container d-flex flex-column min-vh-100 justify-content-center no-gutters">
             <h1 class="text-light">Välkommen till vårt<br> vinterlandskap Snötopia</h1>
             <a href="bokningssida.html">
-                <button class="btn btn-outline-light p-3 col-4 col-md-3 col-lg-2 mt-5 rounded-pill">Boka Nu!</button>
+                <button class="btn btn-lg btn-outline-light p-3 col-4 col-md-3 col-lg-2 mt-5 rounded-pill">Boka
+                    Nu!</button>
             </a>
         </div>
     </div>
     <div class="bg-image landing-image-2">
-        <div class="container">
-            <div class="d-flex flex-row justify-content-center">
-                <div class="card card-body col-6 bg-dark border border-light border-opacity-75 me-3 rounded-5">
+        <div class="container ">
+            <div
+                class="d-flex flex-column flex-lg-row justify-content-center align-items-center align-items-lg-stretch">
+                <img src="img/blatt_monster.svg" id="darkmode_svg-pattern-blue" class="mx-0" style="position: absolute; width: 100vw" alt="">
+                <img src="img/rosa_monster.svg" id="darkmode_svg-pattern-pink" class="mx-0" style="position: absolute; width: 100vw" alt="">
+                <div
+                    class="card card-body col-12 col-lg-6 bg-dark border border-light border-opacity-50 me-0 me-lg-3 my-3 rounded-5">
                     <img class="rounded-4" src="img\simon-mumenthaler-LRnfFgKdVSI-unsplash.jpg" alt="">
                     <h3 class="mt-3">Topp- & våffelstugan</h3>
-                    <p class="mt-3 ml-3">En smakupplevelse mitt i Snötopia
+                    <h4>En smakupplevelse mitt i Snötopia!</h4>
+                    <p class="mt-3 ml-3">
                         Ta en paus från våra snabba backar och unna dig en nygräddad våffla. Våffelstugan är inte bara
                         en
                         plats för påfyllning av energi – det är en del av Snötopias charm, där du kan ta det lugnt,
@@ -62,21 +68,65 @@
                         och skapa minnen som värmer även de kallaste dagar. Sätt dig ner, koppla av och låt våffelstugan
                         bli
                         din egen lilla oas i vinterparadiset.</p>
+                    <a href="vaffelstuga.html">
+                        <button class="btn btn-outline-light rounded-4 px-5 py-2 my-3">
+                            mer info
+                        </button>
+                    </a>
                 </div>
-                <div class="card card-body col-6 bg-dark border border-light border-opacity-75 ms-3 rounded-5">
+
+                <div
+                    class="card card-body col-12 col-lg-6 bg-dark border border-light border-opacity-50 ms-0 ms-lg-3 my-3 rounded-5">
                     <img class="rounded-4" src="img\eirik-uhlen-U5YfxhSze8k-unsplash.jpg" alt="">
                     <h3 class="mt-3">Event & tävlingar</h3>
-                    <p class="mt-3 ml-3">Aurora Alley Open: Brantabergets egna mästerskap, där får besökarna bland annat 
+                    <h4 class="">Aurora Alley Open</h4>
+                    <p class="mt-3 ml-3">Brantabergets egna mästerskap, där får besökarna bland annat
                         tävla i bästa utklädnad, synkroniserad snödans och skidåkningsstafett.</p>
+                        <a href="events.html">
+                            <button class="btn btn-outline-light rounded-4 px-5 py-2 my-3">
+                                mer info
+                            </button>
+                        </a>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="card card-body col-12 bg-dark border border-light border-opacity-50 ms-0 mt-3 rounded-5">
+                    <img class="rounded-4" src="pistkarta" alt="">
+                    <h3 class="mt-3">Pistkarta</h3>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top border-light bg-dark p-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <img class="col-4 mt-5" src="img/logo_light.svg" style="height: 15vh;" alt="">
+                <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-baseline align-items-lg-center">
+                    <div class="col-12 col-md-3 mx-5 mt-5">
+                        <h3>Kontakta oss</h3>
+                        <p><span style="font-weight: 500;">Alla dagar</span><br>10:00-17:00<br>
+                            <span style="font-weight: 500;">Telefon</span><br>072 99 83 231<br>
+                            <span style="font-weight: 500;">E-post</span><br>snotopia@brantaberget.se
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 mx-5 mt-3 mt-lg-5">
+                        <h3>Öppetider</h3>
+                        <p> Butik och reception<br>
+                            Topp- & våffelstuga<br>
+                            Liftar
+                        </p>
+                        <h3>Res hit</h3>
+                        <p>BrantaBerget<br>
+                           619 30 Trosa
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-
-    </div>
-
-
+    </footer>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
