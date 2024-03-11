@@ -35,6 +35,15 @@ p {
     object-fit: scale-down;
 }
 
+.vaffel-image {
+    background-image: url("/img/cottage.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: scale-down;
+    background-position: right;
+}
+
 .landing-image-2 {
     background-image: $darkmode-gradient;
     height: 200vh;
@@ -73,6 +82,10 @@ h1 {
     font-size: 3rem !important;
 }
 
+h2 {
+    font-family: new-spirit;
+}
+
 h3 {
     font-family: new-spirit;
     font-weight: 500;
@@ -84,6 +97,10 @@ h4 {
     font-family: new-spirit;
     font-weight: 300;
     color: $light !important;
+}
+
+.nav-link a:current {
+    color: yellow;
 }
 
 @media (max-width: 1250px) {
