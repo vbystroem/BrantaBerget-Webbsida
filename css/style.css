@@ -4,6 +4,51 @@
   font-weight: 500;
   padding-left: 2rem; }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2rem; }
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid #fff; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%; }
+
+input:checked + .slider {
+  background-color: #ccc;
+  border: 1px solid #fff; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
 p {
   font-size: 1.25rem;
   font-weight: 300;
@@ -15,6 +60,8 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: scale-down; }
+  .landing-image.light-mode {
+    background-image: url("/img/sunrise.jpg"); }
 
 .vaffel-image {
   background-image: url("/img/cottage.jpg");
@@ -41,17 +88,11 @@ p {
 
 /* ----------------------------- 
     event och tävlingar sass-kod */
-.mode-switch {
-  margin-right: 2rem; }
-
-.switch-p {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0; }
-
-.switch {
-  padding-right: 2rem; }
-
+/* .switch-p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+} */
 .event-start-image {
   background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, #111b26 100%), url("/img/sunset.jpg");
   height: 100vh;
@@ -71,62 +112,6 @@ p {
 .barn {
   border-top: 1px solid #fcfae8; }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px; }
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0; }
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #111b26;
-  border: 1px solid #fcfae8;
-  -webkit-transition: .4s;
-  transition: .4s; }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fcfae8;
-  border: 1px solid #111b26;
-  -webkit-transition: .4s;
-  transition: .4s; }
-
-input:checked + .slider {
-  background-color: #f6f0bb; }
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #111b26; }
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px); }
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px; }
-
-.slider.round:before {
-  border-radius: 50%; }
-
 /* slut på sass-kod för event och tävlingra 
     ---------------------*/
 .landing-image-2 {
@@ -136,6 +121,8 @@ input:checked + .slider:before {
   background-size: cover;
   object-fit: scale-down;
   z-index: 1; }
+  .landing-image-2.light-mode {
+    background-image: linear-gradient(#fcfae8, #fcfae8); }
 
 #darkmode_svg-pattern-blue {
   transform: translateY(50vh); }
