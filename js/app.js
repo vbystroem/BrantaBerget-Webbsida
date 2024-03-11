@@ -37,3 +37,4 @@ let bookings = [];
       document.getElementById("btn").addEventListener("click", validateForm);
     });
   }
+
