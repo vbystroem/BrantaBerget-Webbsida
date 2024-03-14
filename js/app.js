@@ -45,7 +45,7 @@ let bookings = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const elementsToToggle = [document.body, document.querySelector('.landing-image-2'), document.querySelector('.bg-image')];
+  const elementsToToggle = [document.body, document.querySelector('body'), document.querySelector('.bg-image'), document.querySelector('.intro-text'), document.querySelector('.intro-text-2'), document.querySelector('.intro-heading')];
 
   // Lägg till lyssnare för klick på dark mode-toggle
   darkModeToggle.addEventListener('change', () => toggleDarkMode(elementsToToggle));

@@ -6,7 +6,11 @@ $quarternary: rgb(222, 168, 206);
 $dark: #111b26;
 $light: rgb(252, 250, 232);
 
-$darkmode-gradient: linear-gradient($dark, $secondary);
+$darkmode-gradient: linear-gradient(
+  to bottom,
+  $dark 50%,
+  $secondary 100%)
+  ;
 
 $navbar-padding-y: 1rem;
 $navbar-dark-color: $light;
@@ -14,6 +18,19 @@ $navbar-dark-color: $light;
 $font-family-sans-serif: futura-pt;
 
 $btn-font-size: 1.25rem;
+
+
+body{
+  background-image: $darkmode-gradient;
+  /* height: 250vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down; */
+ 
+  &.light-mode {
+    background-image: linear-gradient($light, $light);
+  }
+}
 
 .nav-item {
   font-size: 1.5rem;
@@ -89,17 +106,24 @@ p {
   background-size: cover;
   object-fit: scale-down;
 
-  background-image: linear-gradient(
-    to bottom,
-    rgba(235, 178, 238, 0) 50%,
-    $light 100%
-  ),
-  url("/img/sunrise.jpg");
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(111, 70, 38, 0.342) 50%,
+      $light 100%
+    ),
+    url("/img/sunrise.jpg");
+  }
 }
 
 
 .vaffel-image {
-  background-image: url("/img/cottage.jpg");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 178, 238, 0) 50%,
+    $dark 100%
+  ),
+  url("/img/cottage.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,7 +133,7 @@ p {
   &.light-mode {
     background-image: linear-gradient(
       to bottom,
-      rgba(235, 178, 238, 0) 50%,
+      rgba(95, 67, 46, 0.509) 50%,
       $light 100%
     ),
     url("/img/sunset-stuga.jpg");
@@ -126,7 +150,12 @@ p {
 }
 
 .pist-image {
-  background-image: url("/img/pister.jpg");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 178, 238, 0) 0%,
+    $dark 80%
+  ),
+  url("/img/ski-city.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -135,7 +164,7 @@ p {
   &.light-mode {
     background-image: linear-gradient(
       to bottom,
-      rgba(235, 178, 238, 0) 50%,
+      rgba(159, 94, 44, 0.454) 50%,
       $light 100%
     ),
     url("/img/pist-light.jpg");
@@ -161,22 +190,28 @@ p {
   &.light-mode {
     background-image: linear-gradient(
       to bottom,
-      rgba(235, 178, 238, 0) 0%,
-      $light 90%
+      rgba(235, 178, 238, 0) 40%,
+      $light 100%
     ),
-    url("/img/lift.jpg");
+    url("/img/sky.jpg");
   }
 }
 
 .intro-container {
   height: 30vh;
+  
+
+}
+.intro-text,
+.intro-text-2,
+.intro-heading{
+  color: $light; 
+
+  &.light-mode {
+    color: $dark; 
+  }
 }
 
-.intro-text {
-  max-width: 50ch;
-  margin: auto;
-  font-weight: 300;
-}
 
 .barn {
   border-top: 1px solid $light;
@@ -204,15 +239,15 @@ p {
 /* Slut bokning.html */
 
 .landing-image-2 {
-  background-image: $darkmode-gradient;
-  height: 200vh;
+/*   background-image: $darkmode-gradient;
+  height: 250vh;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: scale-down;
   z-index: 1;
   &.light-mode {
     background-image: linear-gradient($light, $light);
-  }
+  } */
 }
 
 #darkmode_svg-pattern-blue {
@@ -235,11 +270,20 @@ p {
   visibility: visible;
 }
 
+/* .text-light{
+  &.light-mode {
+    color: $dark;
+  }
+} */
+
+
+
 h1 {
   font-family: new-spirit;
   font-weight: 700;
   color: $light;
   font-size: 3rem !important;
+  line-height: 1.5; 
 }
 
 h2 {
