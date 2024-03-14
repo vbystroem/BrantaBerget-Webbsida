@@ -1,6 +1,3 @@
-
-
-
 $primary: rgb(127, 168, 210);
 $secondary: rgb(152, 106, 171);
 $tertiary: rgb(243, 147, 106);
@@ -18,245 +15,274 @@ $font-family-sans-serif: futura-pt;
 
 $btn-font-size: 1.25rem;
 
-
 .nav-item {
-    font-size: 1.50rem;
-    font-weight: 500;
-    padding-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-left: 2rem;
 }
 
 // colortheme-switch
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-right: 2rem;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 2rem;
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 34px;
-    border: 1px solid $light;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid $light;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: $light;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $light;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #ffffff74;
-    border: 1px solid $light;
+  background-color: #ffffff74;
+  border: 1px solid $light;
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 //
 
 p {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: $light;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: $light;
 }
 
 .landing-image {
-    background-image: url("/img/clear-skye.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: scale-down;
+  background-image: url("/img/clear-skye.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
 
-    &.light-mode{
-        background-image: url("/img/sunrise.jpg");
-    }
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 178, 238, 0) 50%,
+    $light 100%
+  ),
+  url("/img/sunrise.jpg");
 }
 
+
 .vaffel-image {
-    background-image: url("/img/cottage.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: scale-down;
-    background-position: right;
+  background-image: url("/img/cottage.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  background-position: right;
+
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(235, 178, 238, 0) 50%,
+      $light 100%
+    ),
+    url("/img/sunset-stuga.jpg");
+  }
 }
 
 .event-image {
-    background-image: url("/img/cottage.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: scale-down;
-    background-position: right;
+  background-image: url("/img/cottage.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  background-position: right;
 }
 
 .pist-image {
-    background-image: url("/img/ski-city.jpg");
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-size: cover;
-    height: 100vh;
-}
+  background-image: url("/img/pister.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  height: 100vh;
 
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(235, 178, 238, 0) 50%,
+      $light 100%
+    ),
+    url("/img/pist-light.jpg");
+  }
+}
 
 /* ----------------------------- 
     event och tävlingar sass-kod */
-    
- 
-
-
-
 
 .event-start-image {
-    background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, rgba(17, 27, 38, 1) 100%), url("/img/sunset.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: scale-down;
-    background-position: bottom;
-} 
+  background-image: linear-gradient(
+      to bottom,
+      rgba(235, 178, 238, 0) 0%,
+      rgba(17, 27, 38, 1) 100%
+    ),
+    url("/img/sunset.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  background-position: bottom;
 
-.intro-container {
-    height: 30vh;
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(235, 178, 238, 0) 0%,
+      $light 90%
+    ),
+    url("/img/lift.jpg");
+  }
 }
 
-.intro-text { 
-    max-width: 50ch;
-    margin: auto;
-    font-weight: 300;
+.intro-container {
+  height: 30vh;
+}
+
+.intro-text {
+  max-width: 50ch;
+  margin: auto;
+  font-weight: 300;
 }
 
 .barn {
-    border-top: 1px solid $light;
+  border-top: 1px solid $light;
 }
-
-
-
 
 /* slut på sass-kod för event och tävlingra 
     ---------------------*/
 
-
-    /* Kod till bokningen.html */
+/* Kod till bokningen.html */
 
 .bokningen-image {
-        background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, rgba(17, 27, 38, 1) 100%), url("/img/sunrise.jpg");
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        object-fit: scale-down;
-        background-position: bottom;
-} 
-
-    /* Slut bokning.html */
-
-
-.landing-image-2 {
-    background-image: $darkmode-gradient;
-    height: 200vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: scale-down;
-    z-index: 1;
-    &.light-mode{
-        background-image: linear-gradient($light, $light);
-        
-    }
+  background-image: linear-gradient(
+      to bottom,
+      rgba(235, 178, 238, 0) 0%,
+      rgba(17, 27, 38, 1) 100%
+    ),
+    url("/img/sunrise.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  background-position: bottom;
 }
 
+/* Slut bokning.html */
+
+.landing-image-2 {
+  background-image: $darkmode-gradient;
+  height: 200vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  z-index: 1;
+  &.light-mode {
+    background-image: linear-gradient($light, $light);
+  }
+}
 
 #darkmode_svg-pattern-blue {
-    transform: translateY(50vh);
+  transform: translateY(50vh);
 }
 
 #darkmode_svg-pattern-pink {
-    transform: translateY(120vh);
+  transform: translateY(120vh);
 }
 
-
-.card  {
-    height: 100%;
-} 
+.card {
+  height: 100%;
+}
 
 #logo-svg {
-    width: 50px;
-    height: 50px;
-    fill: $light;
-    stroke: $light;
-    visibility: visible;
+  width: 50px;
+  height: 50px;
+  fill: $light;
+  stroke: $light;
+  visibility: visible;
 }
 
 h1 {
-    font-family: new-spirit;
-    font-weight: 700;
-    color: $light;
-    font-size: 3rem !important;
+  font-family: new-spirit;
+  font-weight: 700;
+  color: $light;
+  font-size: 3rem !important;
 }
 
 h2 {
-    font-family: new-spirit;
+  font-family: new-spirit;
 }
 
 h3 {
-    font-family: new-spirit;
-    font-weight: 500;
-    color: $light !important;
+  font-family: new-spirit;
+  font-weight: 500;
+  color: $light !important;
 }
 
 h4 {
-    font-size: 1.25rem !important;
-    font-family: new-spirit;
-    font-weight: 300;
-    color: $light !important;
+  font-size: 1.25rem !important;
+  font-family: new-spirit;
+  font-weight: 300;
+  color: $light !important;
 }
 
 .nav-link a:current {
-    color: yellow;
+  color: yellow;
 }
 
 @media (max-width: 1250px) {
-    .landing-image {
-        height: 50vh;
-    }
-
-    #darkmode_svg-pattern-blue {
-        transform: translateY(65vh);
-        object-fit: cover;
-        height: 50vh;
-    }
-
-    #darkmode_svg-pattern-pink {
-        transform: translateY(120vh);
-        object-fit: cover;
-        height: 50vh;
-    }
+  .landing-image {
+    height: 50vh;
   }
 
+  #darkmode_svg-pattern-blue {
+    transform: translateY(65vh);
+    object-fit: cover;
+    height: 50vh;
+  }
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+  #darkmode_svg-pattern-pink {
+    transform: translateY(120vh);
+    object-fit: cover;
+    height: 50vh;
+  }
+}
+
+/* bokningssida */
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

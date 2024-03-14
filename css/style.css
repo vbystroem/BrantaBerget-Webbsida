@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .nav-item {
-  font-size: 1.50rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding-left: 2rem; }
 
@@ -59,9 +59,8 @@ p {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: scale-down; }
-  .landing-image.light-mode {
-    background-image: url("/img/sunrise.jpg"); }
+  object-fit: scale-down;
+  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 50%, #fcfae8 100%), url("/img/sunrise.jpg"); }
 
 .vaffel-image {
   background-image: url("/img/cottage.jpg");
@@ -70,6 +69,8 @@ p {
   background-size: cover;
   object-fit: scale-down;
   background-position: right; }
+  .vaffel-image.light-mode {
+    background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 50%, #fcfae8 100%), url("/img/sunset-stuga.jpg"); }
 
 .event-image {
   background-image: url("/img/cottage.jpg");
@@ -80,11 +81,13 @@ p {
   background-position: right; }
 
 .pist-image {
-  background-image: url("/img/ski-city.jpg");
+  background-image: url("/img/pister.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
   height: 100vh; }
+  .pist-image.light-mode {
+    background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 50%, #fcfae8 100%), url("/img/pist-light.jpg"); }
 
 /* ----------------------------- 
     event och tävlingar sass-kod */
@@ -95,6 +98,8 @@ p {
   background-size: cover;
   object-fit: scale-down;
   background-position: bottom; }
+  .event-start-image.light-mode {
+    background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, #fcfae8 90%), url("/img/lift.jpg"); }
 
 .intro-container {
   height: 30vh; }
@@ -180,6 +185,7 @@ h4, .h4 {
     object-fit: cover;
     height: 50vh; } }
 
+/* bokningssida */
 /*!
    * Bootstrap  v5.3.3 (https://getbootstrap.com/)
    * Copyright 2011-2024 The Bootstrap Authors

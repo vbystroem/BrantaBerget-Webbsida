@@ -10,46 +10,59 @@
   </head>
   <body>
     <main>
-      <form name="myForm" class="container">
+      <form name="myForm" class="container col-md-4">
         <h1>Bokning</h1>
         <h2>Välj datum</h2>
-        <div class="datePicker">
-          <div class="formBox">
-            <label for="startDate">Startdatum</label>
-            <input type="date" id="startDate" name="Startdatum">
+        <div class="datePicker d-flex flex-row">
+          <div class="formBox mb-3 me-3">
+            <label for="startDate" class="form-label">Startdatum</label>
+            <input type="date" id="startDate" name="Startdatum" class="form-control">
           </div>
-          <div class="formBox">
-            <label for="daySpan">Antal Dagar</label>
-            <input type="number" id="daySpan" name="Antal dagar">
+          <div class="formBox mb-3">
+            <label for="daySpan" class="form-label">Antal Dagar</label>
+            <input type="number" id="daySpan" name="Antal dagar" class="form-control">
           </div>
         </div>
       
         <h2>Välj paket</h2>
       
         <fieldset class="packageRadio">
-          <label class="card card-body" for="packageBarn">Barnpaketet
+          <label class="card card-body radio-card form-label d-flex flex-row align-items-center" for="packageBarn" style="">
+            <img src="/img/cottage.jpg" style="max-height: 15vh;" alt="">
+            <div class="ms-3">
+              <h4 class="text-dark mt-3">Barnpaketet</h4>
+              <p class="text-dark lh-1">exempeltextexempeltextexempeltext<br>exempeltextexempeltext</p>
+            </div>
+            
           <input
+            class="d-none card-input-element radio-card card-body form-control"
             type="radio"
             id="packageBarn"
             name="packageType"
             value="Barnpaketet"
           />
         </label>
-          <label for="packageUngdom">Ungdomspaketet</label>
-          <input
+          <label for="packageUngdom" class="card card-body form-label">Ungdomspaketet
+            <input
+            class="d-none"
             type="radio"
             id="packageUngdom"
             name="packageType"
             value="Ungdomspaketet"
           />
-          <label for="packageVuxen">Vuxenpaketet</label>
-          <input
+          </label>
+          
+          <label for="packageVuxen" class="card card-body form-label">Vuxenpaketet
+            <input
+            class="d-none"
             type="radio"
             id="packageVuxen"
             name="packageType"
             value="Vuxenpaketet"
             checked="checked"
           />
+          </label>
+          
         </fieldset>
 
         <fieldset class="">
