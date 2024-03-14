@@ -51,7 +51,7 @@ $btn-font-size: 1.25rem;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
-    border: 1px solid #fff;
+    border: 1px solid $light;
 }
 
 .slider:before {
@@ -61,15 +61,15 @@ $btn-font-size: 1.25rem;
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: $light;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #ccc;
-    border: 1px solid #fff;
+    background-color: #ffffff74;
+    border: 1px solid $light;
 }
 
 input:checked + .slider:before {
@@ -130,11 +130,7 @@ p {
     
  
 
-/* .switch-p {
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0;
-} */
+
 
 
 .event-start-image {
@@ -165,6 +161,21 @@ p {
 
 /* slut på sass-kod för event och tävlingra 
     ---------------------*/
+
+
+    /* Kod till bokningen.html */
+
+.bokningen-image {
+        background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, rgba(17, 27, 38, 1) 100%), url("/img/sunrise.jpg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: scale-down;
+        background-position: bottom;
+} 
+
+    /* Slut bokning.html */
+
 
 .landing-image-2 {
     background-image: $darkmode-gradient;
