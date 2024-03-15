@@ -332,7 +332,9 @@ h4 {
 }
 
 /* bokningssida */
-
+.card-input-element:checked+.card{
+  border: solid 2px $primary !important;
+}
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

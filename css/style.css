@@ -210,6 +210,9 @@ h4, .h4 {
     height: 50vh; } }
 
 /* bokningssida */
+.card-input-element:checked + .card {
+  border: solid 2px #7fa8d2 !important; }
+
 /*!
    * Bootstrap  v5.3.3 (https://getbootstrap.com/)
    * Copyright 2011-2024 The Bootstrap Authors
