@@ -19,6 +19,8 @@ $font-family-sans-serif: futura-pt;
 
 $btn-font-size: 1.25rem;
 
+$form-label-margin-bottom: 0;
+
 
 body{
   background-image: $darkmode-gradient;
@@ -36,6 +38,10 @@ body{
   font-size: 1.5rem;
   font-weight: 500;
   padding-left: 2rem;
+}
+
+hr {
+  border-color: $light;
 }
 
 // colortheme-switch
