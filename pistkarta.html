@@ -10,7 +10,7 @@
     <title>BrantaBerget</title>
 </head>
 
-<body>
+<body class="bg-image">
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark border-bottom bg-dark bg-opacity-50">
         <div class="container">
             <div>
@@ -32,10 +32,10 @@
                         <a href="index.html" class="nav-link">Hem</a>
                     </li>
                     <li class="nav-item">
-                        <a href="bokningssida.html" class="nav-link">Boka utrustning</a>
+                        <a href="bokningssida.html" class="nav-link">Boka</a>
                     </li>
                     <li class="nav-item">
-                        <a href="vaffelstuga.html" class="nav-link">Mat & Dryck</a>
+                        <a href="vaffelstuga.html" class="nav-link">Mat &amp; Dryck</a>
                     </li>
                     <li class="nav-item">
                         <a href="events.html" class="nav-link">Events</a>
@@ -53,7 +53,8 @@
         <div class="container d-flex flex-column justify-content-center no-gutters min-vh-100">
             <h1 class="text-light text-center">Pistkarta</h1>
         </div>
-    <div class="bg-image landing-image-2">
+    </div>
+        <div class="bg-image landing-image-2">
         
         <div class="container d-flex justify-content-center col-11 col-md-8 ">
             <div class="card card-body bg-dark border border-light border-opacity-50 me-0 me-lg-3 my-3 rounded-5 p-4">
@@ -71,12 +72,89 @@
                         Kidtopia är det perfekta stället för våra yngsta skidåkare att utforska och ha roligt på BrantaBergets skidanläggning. Med en lekfull miljö och erfarna instruktörer erbjuder Kidtopia säkra och roliga skidupplevelser för barn i alla åldrar och färdighetsnivåer.
                         Kidtopia fyllt med spännande äventyr och möjligheter för hela familjen att njuta av skidåkningens glädje och gemenskap i snön!  </p>
                 </div>
+                <div id="tooltip"></div>
+                <div id="svgContainer rounded-4">
+                  <object
+                    id="svgObject"
+                    type="image/svg+xml"
+                    data="/img/interaktiv_pistkarta/interaktiv_pistkarta/pistkarta.svg"
+                  ></object>
+                  <!-- <img class="svgObject rounded-4" src="/img/interaktiv_pistkarta/interaktiv_pistkarta/pistkarta.svg" alt=""> -->
+                </div>         
+                <div class="backar-lista rounded-bottom-4">
+                  <div class="">
+                    <h6>Kidtopia</h6>
+                    <ul class="kidtopia">
+                      <li>1. Lilla snöglädjen</li>
+                      <li>2. Snögubbevägen</li>
+                      <li>3. Snösvansslingan</li>
+                    </ul>
+                  </div>
+    
+                  <div class="">
+                    <h6>
+                      Gröna backar <br />
+                      - mycket lätt
+                    </h6>
+                    <ul class="green">
+                      <li>4. Pysselpisten</li>
+                      <li>5. Snöleken</li>
+                      <li>6. Stora snöglädjen</li>
+                      <li>7. Frostmagin</li>
+                    </ul>
+                  </div>
+    
+                  <div class="">
+                    <h6>
+                      Blå backar <br />
+                      - lätt
+                    </h6>
+                    <ul class="blue">
+                      <li>8. Stjärnfallsslingan</li>
+                      <li>9. Aurora Alley</li>
+                      <li>10. Midnattsdröm</li>
+                      <li>11. Fjällhorisonten</li>
+                    </ul>
+                  </div>
+    
+                  <div class="">
+                    <h6>
+                      Röda backar <br />
+                      - medelsvår
+                    </h6>
+                    <ul class="red">
+                      <li>12. Midnattsmardröm</li>
+                      <li>13. Rävsnurran</li>
+                    </ul>
+                  </div>
+    
+                  <div class="">
+                    <h6>
+                      Svarta backar <br />
+                      - svår
+                    </h6>
+                    <ul class="black">
+                      <li>14. Djävulsdyket</li>
+                      <li>15. BrantaBlixten</li>
+                    </ul>
+                  </div>
+    
+                  <div class="dashed">
+                    <h6>Streckade backar</h6>
+                    <ul class="dashed">
+                      <li>Ingår i Snötopia men kan även åkas dagtid.</li>
+                    </ul>
+                  </div>
+                </div>
+
                 
                     
                 
             </div> 
         </div>
     </div>
+    <!-- </div> -->
+    
             
 
         
@@ -123,10 +201,10 @@
             </div>
         </div>
     </footer>
-
+</body>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
-
-
+    <script src="js/darkmode.js"></script>
+    <script src="img/interaktiv_pistkarta/interaktiv_pistkarta/javascript.js"></script>
 </html>

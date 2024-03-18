@@ -31,11 +31,29 @@ overflow-x: hidden;
   }
 }
 
+/* .bg-image{
+  background-image: $darkmode-gradient;
+
+   
+    &.light-mode {
+      background-image: linear-gradient($light, $light);
+    }
+  
+} */
+
 .nav-item {
   font-size: 1.5rem;
   font-weight: 500;
   padding-left: 2rem;
 }
+
+/* .bg-dark {
+  color: $dark;
+
+  &.light-mode {
+    color: $light;
+  }
+} */
 
 hr {
   border-color: $light;
@@ -180,6 +198,28 @@ p {
   }
 }
 
+.bokningsida-image {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 178, 238, 0) 0%,
+    $dark 90%
+  ),
+  url("/img/lift.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  height: 100vh;
+
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(197, 110, 44, 0.429) 50%,
+      $light 100%
+    ),
+    url("/img/snowboard-woman.jpg");
+  }
+}
+
 /* ----------------------------- 
     event och tävlingar sass-kod */
 
@@ -211,7 +251,61 @@ p {
   
 
 }
-.intro-text,
+
+.form-label{
+  color: $light ; 
+
+  &.light-mode {
+    color: $dark ;
+  }
+}
+
+.bokning-text{
+  color: $light ; 
+
+  &.light-mode {
+    color: $dark ;
+  }
+}
+.intro-text{
+  color: $light !important; 
+  
+
+  &.light-mode {
+    color: $dark !important;
+    
+  }
+  
+}
+// btn btn-outline-light rounded-5 px-5 py-2 my-3
+
+.go-back{
+  color: $light; 
+  border: 1px solid $light;
+  background-color: transparent;
+  padding: .5rem 3rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+  font-size: $btn-font-size;
+
+  &:hover{
+    background-color: $light;
+    color: $dark;
+  }
+  
+  &.light-mode {
+    color: $dark ;
+    border: 1px solid $dark;
+    background-color: transparent;
+
+    &:hover{
+      background-color: $dark;
+      color: $light;
+    }
+  }
+  
+}
+
 .intro-text-2,
 .intro-heading{
   color: $light; 
@@ -229,6 +323,99 @@ p {
 /* slut på sass-kod för event och tävlingra 
     ---------------------*/
 
+/* kod till pistkarta */
+#tooltip {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  border: 1.5px solid #000;
+  padding: 5px;
+  font-family: Futura, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* slut på kod till pistkarta */
+
+/* PISTKARTA LISTA */
+
+.backar-lista {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between ;
+  background-color: #fff;
+  padding: 2rem;
+/*   padding-left: 1rem;
+  padding-right: 1rem; */
+
+  .dashed{
+    list-style-type: none;
+   
+  }
+
+  ul {
+    margin: 1em;
+    padding: 0;
+  }
+  
+  h6 {
+    font-family: new-spirit;
+  }
+/* 
+  li:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  li:last-child {
+    max-width: 80%;
+  }
+ */
+  .kidtopia li::marker {
+    color: #2e9558; 
+  }
+  
+  .green li::marker {
+    color: #2e9558; 
+  }
+
+  .blue li::marker {
+    color: #1960a9; 
+  }
+
+  .red li::marker {
+    color: #e42229; 
+  }
+
+  .black li::marker {
+    color: #252525; 
+  }
+
+/*   .dashed li::marker {
+    list-style-type: ;
+  }
+ */
+}
+
+@media (max-width: 1000px) {
+  .backar-lista {
+    display: flex;
+    flex-wrap: wrap;
+  }
+    } 
+  
+    @media (max-width: 600px) {
+      .backar-lista {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+        } 
+
+/* -------------------- */
+
+
+
 /* Kod till bokningen.html */
 
 .bokningen-image {
@@ -243,31 +430,32 @@ p {
   background-size: cover;
   object-fit: scale-down;
   background-position: bottom;
+
+  &.light-mode {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(111, 70, 38, 0.504) 50%,
+      $light 100%
+    ),
+    url("/img/sunrise.jpg");
+    }
 }
+
+
 
 /* Slut bokning.html */
-
-.landing-image-2 {
-/*   background-image: $darkmode-gradient;
-  height: 250vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: scale-down;
-  z-index: 1;
-  &.light-mode {
-    background-image: linear-gradient($light, $light);
-  } */
-}
 
 #darkmode_svg-pattern-blue {
   position: absolute;
   transform: translateY(50vh);
+  /* transform: translatex(-27vh); */
   z-index: -1;
 
 }
 
 #darkmode_svg-pattern-pink {
   transform: translateY(120vh);
+  /* transform: translatex(-27vh); */
   z-index: -1;
 }
 
@@ -294,7 +482,7 @@ p {
 h1 {
   font-family: new-spirit;
   font-weight: 700;
-  color: $light;
+
   font-size: 3rem !important;
   line-height: 1.5; 
 }
@@ -340,8 +528,50 @@ h4 {
 
 /* bokningssida */
 .card-input-element:checked+.card{
-  border: solid 2px $primary !important;
+  border: double 5px $primary !important;
 }
+
+
+/* betala-vy */
+
+.betalning {
+  color: $light; 
+}
+
+
+.betal-info {
+
+
+  .kunduppgifter {
+    background-color: $dark;
+    border: 1px solid $light;
+  }
+
+  .kortuppgifter {
+    border: 1px solid $light;
+
+  }
+
+  label {
+    color: $light;
+    font-family: new spirit;
+    }
+
+  input {
+    background: transparent;
+    border: 1px solid $light;
+    outline: none;
+    color: $light;
+    padding-left: 0.4rem;
+  }
+
+  .col {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
