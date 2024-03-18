@@ -1,10 +1,7 @@
 @charset "UTF-8";
 body {
   background-image: linear-gradient(to bottom, #111b26 50%, #986aab 100%);
-  /* height: 250vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: scale-down; */ }
+  overflow-x: hidden; }
   body.light-mode {
     background-image: linear-gradient(#fcfae8, #fcfae8); }
 
@@ -67,16 +64,17 @@ p {
   color: #fcfae8; }
 
 .landing-image {
-  background-image: url("/img/clear-skye.jpg");
+  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 30%, #111b26 100%), url("/img/clear-skye.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: scale-down; }
+  object-fit: scale-down;
+  background-position: right; }
   .landing-image.light-mode {
     background-image: linear-gradient(to bottom, rgba(111, 70, 38, 0.342) 50%, #fcfae8 100%), url("/img/sunrise.jpg"); }
 
 .vaffel-image {
-  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 50%, #111b26 100%), url("/img/cottage.jpg");
+  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 30%, #111b26 100%), url("/img/cottage.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,10 +151,13 @@ p {
   } */ }
 
 #darkmode_svg-pattern-blue {
-  transform: translateY(50vh); }
+  position: absolute;
+  transform: translateY(50vh);
+  z-index: -1; }
 
 #darkmode_svg-pattern-pink {
-  transform: translateY(120vh); }
+  transform: translateY(120vh);
+  z-index: -1; }
 
 .card {
   height: 100%; }

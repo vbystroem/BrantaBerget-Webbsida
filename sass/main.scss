@@ -24,10 +24,7 @@ $form-label-margin-bottom: 0;
 
 body{
   background-image: $darkmode-gradient;
-  /* height: 250vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: scale-down; */
+overflow-x: hidden;
  
   &.light-mode {
     background-image: linear-gradient($light, $light);
@@ -106,11 +103,17 @@ p {
 }
 
 .landing-image {
-  background-image: url("/img/clear-skye.jpg");
+  background-image: linear-gradient(
+    to bottom,
+    rgba(235, 178, 238, 0) 30%,
+    $dark 100%
+  ),
+  url("/img/clear-skye.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: scale-down;
+  background-position: right;
 
   &.light-mode {
     background-image: linear-gradient(
@@ -126,7 +129,7 @@ p {
 .vaffel-image {
   background-image: linear-gradient(
     to bottom,
-    rgba(235, 178, 238, 0) 50%,
+    rgba(235, 178, 238, 0) 30%,
     $dark 100%
   ),
   url("/img/cottage.jpg");
@@ -257,11 +260,15 @@ p {
 }
 
 #darkmode_svg-pattern-blue {
+  position: absolute;
   transform: translateY(50vh);
+  z-index: -1;
+
 }
 
 #darkmode_svg-pattern-pink {
   transform: translateY(120vh);
+  z-index: -1;
 }
 
 .card {
