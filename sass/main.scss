@@ -22,6 +22,9 @@ $btn-font-size: 1.25rem;
 $form-label-margin-bottom: 0;
 
 
+
+
+
 .game-card {
  
   width: 730px;
@@ -78,6 +81,28 @@ $form-label-margin-bottom: 0;
     &.light-mode {
       background-color: $light !important;
     }
+}
+
+
+// Definiera stilar för kortet
+.summary-card {
+  background-color: #f8f9fa; // Bakgrundsfärg för kortet
+  border: 1px solid #ced4da; // Kantlinje runt kortet
+  border-radius: 8px; // Avrunda hörnen på kortet
+  padding: 20px; // Lägg till utrymme runt innehållet inuti kortet
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px; 
+}
+
+// Definiera stilar för rubriken i sammanfattningen
+.summary-card h3 {
+  font-size: 20px; // Storlek på rubriken
+  margin-bottom: 10px; // Lägg till lite utrymme under rubriken
+}
+
+// Definiera stilar för texten i sammanfattningen
+.summary-card p {
+  margin-bottom: 5px; // Lägg till lite utrymme under varje stycke text
 }
 
 
