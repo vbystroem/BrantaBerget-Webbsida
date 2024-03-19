@@ -108,7 +108,7 @@ p {
   background-position: right; }
 
 .pist-image {
-  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, #111b26 80%), url("/img/ski-city.jpg");
+  background-image: linear-gradient(to bottom, rgba(235, 178, 238, 0) 0%, #111b26 80%), url("/img/night-slope.jpg");
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
