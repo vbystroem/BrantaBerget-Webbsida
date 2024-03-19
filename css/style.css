@@ -3,10 +3,12 @@
   width: 730px;
   height: 520px;
   margin: 20px auto;
-  border: 2px solid #000;
+  border: 10px solid #111b26;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #fff;
+  box-shadow: 5px 10px 20px #111b26;
+  margin-bottom: 5rem; }
 
 .game-frame {
   width: 730px;
@@ -20,6 +22,10 @@
 .game-frame:focus {
   outline: none;
   /* Ta bort fokusramen när iframe är i fokus */ }
+
+@media (max-width: 1000px) {
+  .spel {
+    display: none; } }
 
 .bg-image {
   background-image: linear-gradient(to bottom, #111b26 50%, #986aab 100%); }

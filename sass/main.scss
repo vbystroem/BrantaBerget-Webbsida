@@ -27,10 +27,12 @@ $form-label-margin-bottom: 0;
   width: 730px;
   height: 520px;
   margin: 20px auto;
-  border: 2px solid #000;
+  border: 10px solid $dark;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
+  box-shadow: 5px 10px 20px $dark;
+  margin-bottom: 5rem;
 }
 
 .game-frame {
@@ -46,6 +48,11 @@ $form-label-margin-bottom: 0;
   outline: none; /* Ta bort fokusramen när iframe är i fokus */
 }
 
+.spel{
+  @media (max-width: 1000px) {
+    display: none;
+      } 
+}
 
 .bg-image{
   background-image: $darkmode-gradient;
