@@ -10,7 +10,7 @@
   <title>BrantaBerget</title>
 </head>
 
-<body class="bg-image">
+<body class="bokning-bg">
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark border-bottom bg-dark bg-opacity-50">
     <div class="container">
       <div>
@@ -61,8 +61,9 @@
   
 
   <main>
-    <div class=" container col-md-8 col-xl-6 col-xxl-4 d-flex align-items-end" style="height: 33vh;">
-   <!--    <h1 class ="bokning-text mb-5">Bokning</h1> -->
+
+    <div class=" container col-md-8 col-xl-6 col-xxl-4 d-flex align-items-end">
+   
     </div>
     <div
         class=" align-items-lg-stretch">
@@ -74,11 +75,11 @@
           alt=""
         />
       </div>
-     
+      
   
 
-    <form action="bokning_genomford.html" name="myForm" id="bokningsForm" class="container col-md-8 col-xl-6 col-xxl-4 mb-3">
-
+    <form action="bokning_genomford.html" name="myForm" id="bokningsForm" class="container col-md-8 col-xl-6 col-xxl-4 mb-5">
+       
       <h2 class="intro-text mb-3">Välj datum</h2>
       <p class="intro-text">Steg 1 av 5</p>
       <div class="datePicker d-flex flex-row">
@@ -88,10 +89,15 @@
             class="form-control bg-dark border-light border-opacity-25 text-light">
         </div>
         <div class="formBox mb-3 w-25">
-          <label for="daySpan" class ="intro-text-2 form-label">Antal Dagar</label>
+          <label for="daySpan" class ="intro-text form-label">Antal Dagar</label>
           <input type="number" id="daySpan" name="Antal dagar"
             class="form-control bg-dark border-light border-opacity-25 text-light">
         </div>
+      </div>
+      
+      <div class="mb-3">
+        <input class="" type="checkbox" id="liftkort" name="liftkort"/>
+        <label class="form-label" for="liftkort">Jag vill boka liftkort</label>
       </div>
 
       <a class ="mb-5 btn btn-dark border-light border-opacity-25" type="button" data-bs-toggle="collapse"
@@ -105,9 +111,23 @@
       <div id="radioCollapse" class="collapse">
         <fieldset class="packageRadio mb-3">
           <div class="mb-5">
-            <h2 class="intro-text">Skidor</h2>
+            <h2 class="intro-text">Välj Utrustning</h2>
             <p class="intro-text">Steg 2 av 5</p>
+            
+            <label class="form-label w-100 mb-3" for="noEquipment">
+              <input class="card-input-element d-none form-control" type="radio" id="noEquipment" name="packageType" value="noEquipment" checked="checked"/>
+              <div class="card bg-dark border-light border-opacity-25">
+                <div class="card-body d-flex flex-row align-items-center">
+                  <img src="\img\kids-skiing.jpg" style="max-height: 15vh;" alt="">
+                  <div class="ms-3">
+                    <h4 class="">Ingen utrustning</h4>
+                    <p class="card-text lh-1">För dig som väljer att ta med egen utrustning</p>
+                  </div>
+                </div>
+              </div>
+            </label>
 
+            <h2 class="intro-text">Skidor</h2>
             <label class="form-label w-100 mb-3" for="skiPackageBarn">
               <input class="card-input-element d-none form-control" type="radio" id="skiPackageBarn" name="packageType" value="Barnpaketet" checked="checked"/>
               <div class="card bg-dark border-light border-opacity-25">
@@ -196,7 +216,7 @@
           </label>
         </div>
       </fieldset>
-
+     
 
 
       
@@ -380,13 +400,31 @@
               <input class="form-control bg-dark border-light border-opacity-25 text-light" type="text" id="city"
                 name="stad" required>
             </div>
-            <button type="submit" onclick="window.location.href = 'bokning_genomford.html'" class="btn btn-dark py-2 px-4" id="btn">Gå vidare</button>
+            
+            <a class ="mb-5 btn btn-dark border-light border-opacity-25" type="button" data-bs-toggle="collapse"
+              href="#confirmCollapse" aria-expanded="false" aria-controls="confirmCollapse">
+              Bekräfta dina val
+            </a>
+
+            <div id="confirmCollapse" class="collapse">
+              <div class="card bg-dark border-light border-opacity-25 text-light">
+                <h3 class="card-header">Dina val</h3>
+                <script>
+                  document.write(booking)
+                </script>
+              </div>
+              <button type="submit" class="btn btn-dark py-2 px-4 border-light border-opacity-25" id="btn">Gå vidare</button>
+            </div>
+            
+            
           </fieldset>
         </div>
       </div>
       </div>
     </form>
 
+    
+    
   </main>
 
   <footer class="border-top border-light bg-dark">

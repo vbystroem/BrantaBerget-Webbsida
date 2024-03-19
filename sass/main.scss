@@ -22,24 +22,57 @@ $btn-font-size: 1.25rem;
 $form-label-margin-bottom: 0;
 
 
-body{
+.game-card {
+ 
+  width: 730px;
+  height: 520px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.game-frame {
+ 
+  width: 730px;
+  height: 520px; /* Anpassa bredden för att passa cardets bredd */
+  /* Behåll samma proportioner som spelet */
+  border: none;
+  overflow: hidden; /* Dölj scrollbarer */
+}
+
+.game-frame:focus {
+  outline: none; /* Ta bort fokusramen när iframe är i fokus */
+}
+
+
+.bg-image{
   background-image: $darkmode-gradient;
-overflow-x: hidden;
  
   &.light-mode {
     background-image: linear-gradient($light, $light);
   }
 }
 
-/* .bg-image{
-  background-image: $darkmode-gradient;
+.landing-image-2{
+  background-color: $dark !important;
+
+   
+  &.light-mode {
+    background-color: $light !important;
+  }
+}
+
+.bokning-bg{
+  background-color: $dark !important;
 
    
     &.light-mode {
-      background-image: linear-gradient($light, $light);
+      background-color: $light !important;
     }
-  
-} */
+}
+
 
 .nav-item {
   font-size: 1.5rem;
@@ -47,13 +80,6 @@ overflow-x: hidden;
   padding-left: 2rem;
 }
 
-/* .bg-dark {
-  color: $dark;
-
-  &.light-mode {
-    color: $light;
-  }
-} */
 
 hr {
   border-color: $light;
@@ -144,6 +170,8 @@ p {
 }
 
 
+
+
 .vaffel-image {
   background-image: linear-gradient(
     to bottom,
@@ -180,7 +208,7 @@ p {
   background-image: linear-gradient(
     to bottom,
     rgba(235, 178, 238, 0) 0%,
-    $dark 80%
+    $dark 100%
   ),
   url("/img/night-slope.jpg");
   background-repeat: no-repeat;
@@ -443,6 +471,8 @@ p {
 
 
 
+
+
 /* Slut bokning.html */
 
 #darkmode_svg-pattern-blue {
@@ -471,11 +501,6 @@ p {
   visibility: visible;
 }
 
-/* .text-light{
-  &.light-mode {
-    color: $dark;
-  }
-} */
 
 
 

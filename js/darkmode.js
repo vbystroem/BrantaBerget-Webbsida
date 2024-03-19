@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const elementsToToggle = [
     document.body, 
-    ...document.querySelectorAll('.bg-image, .intro-text, .intro-text-2, .bokning-text, .form-label, .go-back')
+    ...document.querySelectorAll('.bg-image, .intro-text, .form-label, .go-back, .bokning-bg, .landing-image-2')
   ];
   // Lägg till lyssnare för klick på dark mode-toggle
   darkModeToggle.addEventListener('change', () => toggleDarkMode(elementsToToggle));
