@@ -70,7 +70,7 @@
         <img
           src="img/blatt_monster.svg"
           id="darkmode_svg-pattern-blue"
-          class="mx-0"
+          class="mx-0 d-none d-md-block"
           style="position: absolute; width: 100vw; height: auto; transform: translateY(0)"
           alt=""
         />
@@ -335,7 +335,7 @@
             </div>
           </div>
         </div>
-        <a class="text-light mb-3 btn btn-dark border-light border-opacity-25" type="button" data-bs-toggle="collapse"
+        <a class="text-light mb-3 btn btn-dark border-light border-opacity-25 rounded-5 px-5 py-2 my-3" type="button" data-bs-toggle="collapse"
           href="#infoCollapse" aria-expanded="false" aria-controls="collapseExample">
           Nästa
         </a>
@@ -344,7 +344,7 @@
       <hr class="border-secondary w-75 mb-5">
 
       <div id="infoCollapse" class="collapse">
-        <div class="d-flex justify-content-center justify-content-md-start mb-5 ms-0">
+        <div class="d-flex mb-5">
           <fieldset class="w-md-75">
             <h2 class="intro-text mb-3">Dina uppgifter</h2>
             <p class="intro-text">Steg 4 av 5</p>
@@ -401,22 +401,16 @@
                 name="stad" required>
             </div>
             
-            <a id="confirmButton" class ="mb-5 btn btn-dark border-light border-opacity-25" type="button" data-bs-toggle="collapse"
+            <a id="confirmButton" class ="mb-5 btn btn-dark border-light border-opacity-25 rounded-5 px-5 py-2 my-3" type="button" data-bs-toggle="collapse"
               href="#confirmCollapse" aria-expanded="false" aria-controls="confirmCollapse">
               Bekräfta dina val
             </a>
-
-            <div id="confirmCollapse" class="collapse">
-              <!-- <div id="confirmer" class="card bg-dark border-light border-opacity-25 text-light">
-                <h3 class="card-header">Dina val</h3>
-                <script>
-                  document.write(booking)
-                </script>
-              </div> -->
               <div class="columns card p-5 text-light card-body bg-dark my-3 rounded-5 d-flex col-12  border border-light
               border-opacity-50 d-flex justify-content-center" id="summary"></div>
 
-              <button type="submit" class="btn btn-dark mt-3 py-2 px-4 border-light border-opacity-25" id="btn">Boka</button>
+              <button class="btn btn-outline-light rounded-5 px-5 py-2 my-3">
+                Boka
+              </button>
             </div>
             
             
